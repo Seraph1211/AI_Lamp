@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".plans.PlanInfoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageButton
+            android:id="@+id/buttonPlanInfoBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/back2_black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"
+            android:text="任务收集箱"/>
+
+        <ImageButton
+            android:id="@+id/buttonDeletePlan"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/remove"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--任务标题-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextTitleOfPlanInfo"
+            android:gravity="center|left"
+            android:paddingLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:hint="准备做些什么？"
+            android:textSize="18sp"
+            android:background="@null"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <!--分割线-->
+    <View
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D1CFCF"/>
+
+    <!--任务详情-->
+    <ScrollView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/editTextPlanInfo"
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="想好要怎么做了吗？"
+        android:background="@null"
+        />
+    </ScrollView>
+
+</LinearLayout>

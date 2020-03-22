@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarQRCode"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff">
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:onClick="onClickBack"
+            android:background="@drawable/back2_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="我的二维码"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageQRCode"
+        android:src="@drawable/load_failure"
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
+</RelativeLayout>

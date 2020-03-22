@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/img_loging"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loding.ZhuCe">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="用户注册"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="用户名:"
+                android:textSize="20sp" />
+
+            <EditText
+                android:layout_margin="4dp"
+                android:id="@+id/et_zhuce_username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/text_sytle"
+                android:gravity="left"
+                android:hint="手机号"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="密  码:"
+                android:textSize="20sp" />
+
+            <EditText
+                android:layout_margin="4dp"
+                android:id="@+id/et_zhuce_pass1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/text_sytle"
+                android:gravity="left"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="密  码:"
+                android:textSize="20sp" />
+
+            <EditText
+                android:layout_margin="4dp"
+                android:id="@+id/et_zhuce_pass2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/text_sytle"
+                android:gravity="left"
+                android:hint="再输入一次"
+                android:inputType="textPassword"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_margin="4dp"
+                android:id="@+id/et_zhuce_yanzheng"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/text_sytle"
+                android:gravity="left"
+                android:hint="  验证码"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/bt_zhuce_get"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                android:layout_weight="2"
+                android:background="#6666"
+                android:gravity="center"
+                android:text="获取"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_zhuce_zhuce"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="6dp"
+            android:background="#6fff"
+            android:gravity="center"
+            android:text="开始注册"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

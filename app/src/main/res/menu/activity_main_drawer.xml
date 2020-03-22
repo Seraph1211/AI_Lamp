@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/myData"
+            android:icon="@drawable/a1"
+            android:title="个人资料" />
+        <item
+            android:id="@+id/myCard"
+            android:icon="@drawable/a2"
+            android:title="签到打卡" />
+        <item
+            android:id="@+id/myLamp"
+            android:icon="@drawable/a3"
+            android:title="我的台灯" />
+        <item
+            android:id="@+id/mySetting"
+            android:icon="@drawable/a4"
+            android:title="设置" />
+    </group>
+
+    <item android:title="其他">
+        <menu>
+            <item
+                android:id="@+id/myHelp"
+                android:icon="@drawable/b1"
+                android:title="使用帮助" />
+            <item
+                android:id="@+id/myOurs"
+                android:icon="@drawable/b2"
+                android:title="关于我们" />
+            <item
+                android:id="@+id/myOut"
+                android:icon="@drawable/b3"
+                android:title="退出用户" />
+        </menu>
+    </item>
+
+</menu>

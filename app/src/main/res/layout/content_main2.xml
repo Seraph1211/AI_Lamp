@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_4"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_nav"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:contentInsetStart="0dp"
+                android:onClick="openDrawer"
+                android:padding="10dp"
+                android:src="@drawable/hou"
+                app:civ_border_color="#000000"
+                app:civ_border_width="1dp"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+                <!--台灯-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_lamp"
+                    android:layout_margin="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_corner_7c4dff"
+                    >
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="0dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/lamp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/menu_lamp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/more"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#ffffff"
+                        android:text="我的台灯"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--音乐-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_music"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_corner_fd6c6c">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/music"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/menu_music"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/more"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#ffffff"
+                        android:text="我的音乐"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+                <!--计时-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_clock"
+                    android:layout_margin="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_corner_5eeea8"
+                    >
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/clock"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/menu_clock"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/more"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#ffffff"
+                        android:text="番茄计时"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--便签-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_note"
+                    android:layout_margin="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_corner_797070"
+                    >
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="3dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/note"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/menu_note"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/more"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#ffffff"
+                        android:text="我的便签"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+                <!--报告-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_report"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_corner_536dfe">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="5dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/report"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/menu_report"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/more"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#ffffff"
+                        android:text="专注度报告"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--社区-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_community"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_corner_00ca99">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/community"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/menu_community"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/more"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#ffffff"
+                        android:text="社区交流"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+                <!--更多功能-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_notice"
+                    android:layout_margin="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_corner_fdd835"
+                    >
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:src="@drawable/more_functions"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/menu_more"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/more"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="#ffffff"
+                        android:text="更多功能,敬请期待"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+

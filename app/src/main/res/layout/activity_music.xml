@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".music.Music"
+android:background="#999">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginTop="10dp"
+    android:layout_alignParentTop="true"
+    android:id="@+id/title"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="3dp"
+        android:text="出山"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="#ffffff"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffff" />
+</LinearLayout>
+
+<ImageView
+    android:id="@+id/disc"
+    android:layout_width="240dp"
+    android:layout_height="240dp"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@+id/title"
+    android:layout_marginTop="50dp"
+    android:src="@drawable/img_music_1" />
+    <ImageView
+        android:id="@+id/needle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="150dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/rl"
+        android:layout_marginBottom="5dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffff" />
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <SeekBar
+                android:layout_weight="1"
+
+                android:id="@+id/music_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextSwitcher
+                android:layout_weight="3"
+                android:id="@+id/text_switcher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="00:00/2:00"
+                    android:textColor="@color/colorAccent"/>
+            </TextSwitcher>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:gravity="center"
+    android:id="@+id/rl"
+    android:layout_marginBottom="20dp"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_weight="1"
+        android:id="@+id/playing_pre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/last" />
+
+    <ImageView
+        android:layout_weight="1"
+        android:id="@+id/playing_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/bofang" />
+
+    <ImageView
+        android:layout_weight="1"
+        android:id="@+id/playing_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/next" />
+</LinearLayout>
+</RelativeLayout>
+

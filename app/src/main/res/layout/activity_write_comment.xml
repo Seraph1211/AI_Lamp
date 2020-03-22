@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="取消"
+            android:onClick="cancelComment"
+            android:background="#ffffff"/>
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="完成"
+            android:onClick="addComment"
+            android:background="#ffffff"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:hint="写下你的评论..."/>
+
+</LinearLayout>
