@@ -21,7 +21,8 @@ import com.bumptech.glide.Glide;
 import com.coolweather.ai_lamp.dynamic.DynamicActivity;
 import com.coolweather.ai_lamp.light.MyLeight;
 import com.coolweather.ai_lamp.loding.Loging;
-import com.coolweather.ai_lamp.music.Music;
+import com.coolweather.ai_lamp.music.MusicActivity;
+import com.coolweather.ai_lamp.music.MusicListActivity;
 import com.coolweather.ai_lamp.plans.PlanListActivity;
 import com.coolweather.ai_lamp.report.LearningReportActivity;
 import com.coolweather.ai_lamp.tomato.TomatoClockActivity;
@@ -182,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "音乐", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, Music.class);
+                Intent intent = new Intent(MainActivity.this, MusicListActivity.class);
                 startActivity(intent);
             }
         });

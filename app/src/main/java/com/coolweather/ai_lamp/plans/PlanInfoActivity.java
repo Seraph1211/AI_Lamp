@@ -14,6 +14,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.coolweather.ai_lamp.R;
+import com.coolweather.ai_lamp.tools.StatusBarUtils;
 
 
 /**
@@ -48,6 +49,8 @@ public class PlanInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_plan_info);
 
 
+        StatusBarUtils.setStatusBarColor(PlanInfoActivity.this, R.color.colorWhite);
+        StatusBarUtils.setLightStatusBar(PlanInfoActivity.this, true, true);  //状态栏字体颜色-黑
 
         init();
 

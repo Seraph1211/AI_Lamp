@@ -9,6 +9,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.coolweather.ai_lamp.R;
+import com.coolweather.ai_lamp.tomato.TomatoClockActivity;
+import com.coolweather.ai_lamp.tools.StatusBarUtils;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -75,6 +77,7 @@ public class LearningReportActivity extends AppCompatActivity implements View.On
      */
     List<SliceValue> sliceValues = new ArrayList<>();
     String[] pieLabels = {"专注时长", "不专注时长"};
+    int[] pieColors = {Color.parseColor("#43CD80"), Color.parseColor("#EE6363")};
     private float totalConcentrationTimeWeekly = 8.6f;  //本周专注总时长
     private float totalConcentrationTimeMonthly = 23.3f;  //本月专注总时长
     private float totalLearningTimeWeekly = 12.2f;  //本周学习总时长
@@ -84,6 +87,9 @@ public class LearningReportActivity extends AppCompatActivity implements View.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_learning_report);
+
+        StatusBarUtils.setStatusBarColor(LearningReportActivity.this, R.color.colorWhite);
+        StatusBarUtils.setLightStatusBar(LearningReportActivity.this, true, true);  //状态栏字体颜色-黑
 
         init();
     }
@@ -132,7 +138,8 @@ public class LearningReportActivity extends AppCompatActivity implements View.On
         //向sliceValues中填充数据
         for(int i=0; i<pieLabels.length; i++){
             String result=numberFormat.format(((double)pieValues[i])/((double)sum));
-            SliceValue sliceValue = new SliceValue(pieValues[i], ChartUtils.pickColor()); //新建对象的同时设置数值和颜色
+            SliceValue sliceValue = new SliceValue(pieValues[i], pieColors[i]); //新建对象的同时设置数值和颜色
+
             sliceValue.setLabel(pieLabels[i]+":"+result); //设置标签
             sliceValues.add(sliceValue);
         }

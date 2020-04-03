@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.coolweather.ai_lamp.R;
+import com.coolweather.ai_lamp.tools.StatusBarUtils;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -38,6 +39,9 @@ public class PlanListActivity extends AppCompatActivity implements PlanItemAdapt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plan_list);
+
+        StatusBarUtils.setStatusBarColor(PlanListActivity.this, R.color.colorWhite);
+        StatusBarUtils.setLightStatusBar(PlanListActivity.this, true, true);  //状态栏字体颜色-黑
 
         init();
     }

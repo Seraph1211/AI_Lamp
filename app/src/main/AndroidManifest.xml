@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.coolweather.ai_lamp">
 
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 写入SD卡的权限：如果你希望保存相机拍照后的照片 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读取SD卡的权限:打开相册选取图片所必须的权限 -->
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,10 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".QRCodeActivity"></activity>
-        <activity android:name=".music.Music" />
         <activity android:name=".light.MyLeight" />
 
-        <service android:name=".music.MediaService" />
+        <activity android:name=".music.MusicActivity"
+            android:launchMode="singleInstance"/>
+
+        <activity android:name=".music.MusicListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:launchMode="singleInstance"/>
 
         <activity android:name=".dynamic.DynamicActivity"/>
         <activity android:name=".dynamic.CommentsActivity"/>

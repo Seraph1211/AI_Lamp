@@ -18,6 +18,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.coolweather.ai_lamp.R;
+import com.coolweather.ai_lamp.report.LearningReportActivity;
+import com.coolweather.ai_lamp.tools.StatusBarUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +43,10 @@ public class DynamicActivity extends AppCompatActivity implements SwipeRefreshLa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dynamic);
+
+        StatusBarUtils.setStatusBarColor(DynamicActivity.this, R.color.colorWhite);
+        StatusBarUtils.setLightStatusBar(DynamicActivity.this, true, true);  //状态栏字体颜色-黑
+
         mIsRefreshing = false;
         mList = new ArrayList<>();
         initList();
@@ -57,7 +63,7 @@ public class DynamicActivity extends AppCompatActivity implements SwipeRefreshLa
     public void initList(){
         for(int i=0; i<10; i++){
             DynamicBean bean = new DynamicBean();
-            bean.setNickname("User_"+i+1);
+            bean.setNickname("User_"+i);
             bean.setContent("哈哈哈哈哈哈哈哈哈哈哈");
             bean.setCommentCount(0);
             bean.setReadCount(0);

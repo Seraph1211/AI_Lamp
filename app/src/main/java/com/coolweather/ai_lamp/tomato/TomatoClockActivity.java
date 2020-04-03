@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.coolweather.ai_lamp.R;
+import com.coolweather.ai_lamp.tools.StatusBarUtils;
 
 
 public class TomatoClockActivity extends AppCompatActivity {
@@ -17,6 +18,10 @@ public class TomatoClockActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tomato_clock);
+
+        StatusBarUtils.transparencyBar(TomatoClockActivity.this);  //设为透明
+        StatusBarUtils.setLightStatusBar(TomatoClockActivity.this, true, true);  //状态栏字体颜色-黑
+
         clockView = findViewById(R.id.clockView);
         btnClock = findViewById(R.id.btn_start);
         btnClock.setOnClickListener(new View.OnClickListener() {

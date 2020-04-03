@@ -35,6 +35,7 @@ public class DynamicAdapter extends RecyclerView.Adapter<DynamicAdapter.ViewHold
         View view = LayoutInflater.from(mContext).inflate(R.layout.item_dynamic, viewGroup, false);
         final ViewHolder viewHolder = new ViewHolder(view);
 
+        /*
         viewHolder.ib_dynamic_comment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +45,7 @@ public class DynamicAdapter extends RecyclerView.Adapter<DynamicAdapter.ViewHold
                 buttonInterface.onclick(intent, pos);
             }
         });
+         */
 
         viewHolder.toggle_dynamic_likes.setChecked(false);
         viewHolder.toggle_dynamic_likes.setOnClickListener(new View.OnClickListener() {
@@ -78,8 +80,8 @@ public class DynamicAdapter extends RecyclerView.Adapter<DynamicAdapter.ViewHold
          */
         viewHolder.tv_dynamic_name.setText(dynamic.getNickname());
         viewHolder.tv_dynamic_content.setText(dynamic.getContent());
-        viewHolder.tv_dynamic_times.setText("浏览次数 "+dynamic.getReadCount());
-        viewHolder.tv_dynamic_comment_num.setText(dynamic.getCommentCount()+"");
+        //viewHolder.tv_dynamic_times.setText("浏览次数 "+dynamic.getReadCount());
+        //viewHolder.tv_dynamic_comment_num.setText(dynamic.getCommentCount()+"");
         viewHolder.tv_dynamic_likes_num.setText(dynamic.getLikeCount()+"");
         if (dynamic.isLike()) {
             viewHolder.toggle_dynamic_likes.setChecked(true);
@@ -115,9 +117,9 @@ public class DynamicAdapter extends RecyclerView.Adapter<DynamicAdapter.ViewHold
             civ_dynamic_head = view.findViewById(R.id.civ_dynamic_head);
             tv_dynamic_name = view.findViewById(R.id.tv_dynamic_name);
             tv_dynamic_content = view.findViewById(R.id.tv_dynamic_content);
-            tv_dynamic_times = view.findViewById(R.id.tv_dynamic_times);
-            ib_dynamic_comment = view.findViewById(R.id.ib_dynamic_comment);
-            tv_dynamic_comment_num = view.findViewById(R.id.tv_dynamic_comment_num);
+            //tv_dynamic_times = view.findViewById(R.id.tv_dynamic_times);
+            //ib_dynamic_comment = view.findViewById(R.id.ib_dynamic_comment);
+            //tv_dynamic_comment_num = view.findViewById(R.id.tv_dynamic_comment_num);
             toggle_dynamic_likes = view.findViewById(R.id.toggle_dynamic_likes);
             tv_dynamic_likes_num = view.findViewById(R.id.tv_dynamic_likes_num);
 
