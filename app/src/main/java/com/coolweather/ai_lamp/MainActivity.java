@@ -19,9 +19,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.bumptech.glide.Glide;
 import com.coolweather.ai_lamp.dynamic.DynamicActivity;
-import com.coolweather.ai_lamp.light.MyLeight;
+import com.coolweather.ai_lamp.lamp.LampActivity;
 import com.coolweather.ai_lamp.loding.Loging;
-import com.coolweather.ai_lamp.music.MusicActivity;
 import com.coolweather.ai_lamp.music.MusicListActivity;
 import com.coolweather.ai_lamp.plans.PlanListActivity;
 import com.coolweather.ai_lamp.report.LearningReportActivity;
@@ -191,7 +190,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "台灯", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, MyLeight.class);
+                Intent intent = new Intent(MainActivity.this, LampActivity.class);
                 startActivity(intent);
             }
         });

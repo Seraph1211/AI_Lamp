@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".QRCodeActivity"></activity>
-        <activity android:name=".light.MyLeight" />
+        <activity android:name=".lamp.LampActivity" />
 
         <activity android:name=".music.MusicActivity"
             android:launchMode="singleInstance"/>
