@@ -29,7 +29,7 @@
                 android:contentInsetStart="0dp"
                 android:onClick="openDrawer"
                 android:padding="10dp"
-                android:src="@drawable/hou"
+                android:src="@drawable/default_img"
                 app:civ_border_color="#000000"
                 app:civ_border_width="1dp"/>
 
